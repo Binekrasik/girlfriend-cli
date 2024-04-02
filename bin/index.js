@@ -40,10 +40,13 @@ function errorLog(error) {
 function showHobbies() {
   const { hobbies } = db.data;
   console.log(hobbies)
+  
+  let todoText = '';
   hobbies.forEach((hobby, index) => {
-    const todoText = `${index+1}. ${hobby}`
-    console.log(todoText);
+      todoText += `${index+1}. ${hobby}\n`;
   });
+  
+  console.log(todoText);
 }
 
 // add a new hobby
